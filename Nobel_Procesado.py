@@ -27,7 +27,7 @@ nobel['Label'] = nobel['Category'].str.lower().map(
     {'physics': 0, 'medicine': 1, 'peace': 2, 'literature': 3, 'chemistry': 4, 'economics': 5}
 )
 
-X = nobel['clean_motivation'] if 'clean_motivation' in nobel.columns else nobel['Motivation']
+X = nobel['clean_motivation']
 y = nobel['Label']
 
 vect = CountVectorizer()
